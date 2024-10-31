@@ -78,15 +78,19 @@ def main_menu():
         print("4. Delete Contact")
         print("5. Exit")
 
-        choice = input("Choose an option:").strp()
+        choice = input("Choose an option:").strip()
 
         if choice == "1":
             add_contact(contacts)
         elif choice == "2":
             view_contacts(contacts)
         elif choice == "3":
-            print("Exiting Contact Book. Goodbye! ")
-            break 
+           edit_contact(contacts)
+        elif choice == "4":
+            delete_contact(contacts)
+        elif choice == "5":
+            print("Exiting Contact Manager. Goodbye!")
+            break
         else: 
             print("Invalid choice. Please try again. ")
 
